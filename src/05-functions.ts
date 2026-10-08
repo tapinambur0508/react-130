@@ -39,7 +39,7 @@ interface Cat {
   // meow(): void;
   // eat(food: string): string;
   meow: () => void;
-  eat: (food: string) => void;
+  eat: (food: string) => string;
 }
 
 const cat1: Cat = {
@@ -54,3 +54,6 @@ const cat1: Cat = {
 };
 
 const result = cat1.eat("apple");
+
+const arr1 = [];
+[1, 2, 3, 4, 5].forEach((element) => arr1.push(element));
