@@ -6,8 +6,12 @@ const API = axios.create({
   baseURL: "https://62584f320c918296a49543e7.mockapi.io",
 });
 
-export const getTasks = async (): Promise<Task[]> => {
-  const { data } = await API.get<Task[]>("/tasks");
+export const getTasks = async (search: string): Promise<Task[]> => {
+  const { data } = await API.get<Task[]>("/tasks", {
+    params: {
+      search,
+    },
+  });
   return data;
 };
 
